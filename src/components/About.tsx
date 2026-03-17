@@ -1,6 +1,34 @@
+import { useEffect, useRef, useState } from "react";
 import fotoConsultorio from "@/assets/foto_consultorio1.jpeg";
 
 const About = () => {
+  const statsRef = useRef<HTMLDivElement | null>(null);
+  const [statsVisible, setStatsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = statsRef.current;
+
+    if (!node) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.35,
+      },
+    );
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="sobre" className="py-24 lg:py-32 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
@@ -33,13 +61,19 @@ const About = () => {
                 e qualidade de vida de forma sustentável.
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-6 pt-4">
+            <div ref={statsRef} className="grid grid-cols-3 gap-6 pt-4">
               {[
                 { value: "2+", label: "Anos de atuação" },
                 { value: "100%", label: "Personalizado" },
                 { value: "∞", label: "Compromisso" },
-              ].map((stat) => (
-                <div key={stat.label}>
+              ].map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className={`transition-all duration-700 ease-out ${
+                    statsVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${index * 160}ms` }}
+                >
                   <p className="font-display text-3xl text-primary">{stat.value}</p>
                   <p className="font-mono text-xs text-muted-foreground mt-1">{stat.label}</p>
                 </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo_colorida.png";
-import { Menu, X } from "lucide-react";
+import logoWhite from "@/assets/logo_branca.png";
+import { Menu, Moon, Sun, X } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -14,12 +15,28 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isBlackTheme, setIsBlackTheme] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("find-theme");
+    const shouldUseBlack = savedTheme === "black";
+
+    setIsBlackTheme(shouldUseBlack);
+    document.documentElement.classList.toggle("theme-black", shouldUseBlack);
+  }, []);
+
+  const toggleTheme = () => {
+    const nextIsBlack = !isBlackTheme;
+    setIsBlackTheme(nextIsBlack);
+    document.documentElement.classList.toggle("theme-black", nextIsBlack);
+    window.localStorage.setItem("find-theme", nextIsBlack ? "black" : "default");
+  };
 
   return (
     <header
@@ -31,7 +48,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         <a href="#inicio">
-          <img src={logo} alt="FIND Recife" className="h-12 w-auto" />
+          <img src={isBlackTheme ? logoWhite : logo} alt="FIND Recife" className="h-12 w-auto" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -47,6 +64,17 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-[12px] border border-border text-foreground/80 hover:text-primary hover:border-primary/40 transition-colors duration-200"
+            aria-label={isBlackTheme ? "Ativar tema padrão" : "Ativar tema black"}
+          >
+            {isBlackTheme ? <Sun size={16} /> : <Moon size={16} />}
+            <span className="font-body text-xs font-semibold uppercase tracking-wide">
+              {isBlackTheme ? "" : ""}
+            </span>
+          </button>
           <a
             href="https://wa.me/558194251583"
             target="_blank"
@@ -57,12 +85,23 @@ const Header = () => {
           </a>
         </div>
 
-        <button
-          className="lg:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="inline-flex items-center justify-center h-10 w-10 rounded-[12px] border border-border text-foreground"
+            aria-label={isBlackTheme ? "Ativar tema padrão" : "Ativar tema black"}
+          >
+            {isBlackTheme ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          <button
+            className="text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (

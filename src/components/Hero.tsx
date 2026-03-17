@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 pt-32 pb-16 lg:pt-0 lg:pb-0 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 pt-40 pb-16 lg:pt-12 lg:pb-0 relative z-10">
         <div className="max-w-3xl space-y-8 animate-fade-up min-h-[85vh] flex flex-col justify-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-[12px] bg-secondary font-mono text-xs text-muted-foreground tracking-wide w-fit">
             <span className="w-2 h-2 rounded-full bg-primary" />
