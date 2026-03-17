@@ -48,7 +48,7 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="https://wa.me/5581999999999"
+            href="https://wa.me/558194251583"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
@@ -79,7 +79,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/5581999999999"
+              href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold"

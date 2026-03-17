@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 lg:pt-0 lg:pb-0 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 pt-32 pb-16 lg:pt-0 lg:pb-0 relative z-10">
         <div className="max-w-3xl space-y-8 animate-fade-up min-h-[85vh] flex flex-col justify-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-[12px] bg-secondary font-mono text-xs text-muted-foreground tracking-wide w-fit">
             <span className="w-2 h-2 rounded-full bg-primary" />
@@ -33,7 +33,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-2">
             <a
-              href="https://wa.me/5581999999999"
+              href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-base shadow-gold hover:scale-[1.02] transition-all duration-200"

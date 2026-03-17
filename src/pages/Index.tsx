@@ -9,6 +9,7 @@ import Structure from "@/components/Structure";
 import Professional from "@/components/Professional";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import WhatsAppPopup from "@/components/WhatsAppPopup";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <Professional />
       <CtaSection />
       <Footer />
+      <WhatsAppPopup />
     </div>
   );
 };

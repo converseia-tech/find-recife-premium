@@ -60,7 +60,7 @@ const Services = () => {
                       <p className="font-body text-sm text-muted-foreground mt-1">{service.desc}</p>
                     </div>
                     <a
-                      href="https://wa.me/5581999999999"
+                      href="https://wa.me/558194251583"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="shrink-0 text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-1"
