@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# FIND Recife Partnership Hub
 
-TODO: Document your project here
+Projeto frontend em React + Vite para o site da FIND Recife.
