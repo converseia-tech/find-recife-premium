@@ -35,7 +35,7 @@ const Professional = () => {
           <div className="order-1 lg:order-2 relative rounded-3xl overflow-hidden aspect-[3/4] max-h-[500px] gold-frame">
             <img
               src={drEmanuel}
-              alt="Dr. Emmanuel - Fisioterapeuta FIND Recife"
+              alt="Dr. José Emannuel e Dr. Ítalo Bruno - Fundadores da FIND Recife"
               className="w-full h-full object-cover object-top"
             />
           </div>
