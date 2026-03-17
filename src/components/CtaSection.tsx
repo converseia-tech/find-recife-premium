@@ -15,7 +15,7 @@ const CtaSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/5581999999999"
+              href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-base shadow-gold hover:scale-[1.02] transition-all duration-200"
@@ -23,7 +23,7 @@ const CtaSection = () => {
               Agendar Avaliação
             </a>
             <a
-              href="https://wa.me/5581999999999"
+              href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-[12px] border border-dark-surface-foreground/20 text-dark-surface-foreground font-body font-semibold text-base hover:border-primary/50 transition-all duration-200"

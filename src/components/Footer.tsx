@@ -80,7 +80,7 @@ const Footer = () => {
             © 2024 FIND Recife. Todos os direitos reservados.
           </p>
           <a
-            href="https://wa.me/5581999999999"
+            href="https://wa.me/558194251583"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs text-primary hover:text-accent transition-colors"
