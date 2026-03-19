@@ -7,6 +7,7 @@ import KneeSpine from "@/components/KneeSpine";
 import Thermography from "@/components/Thermography";
 import Structure from "@/components/Structure";
 import Professional from "@/components/Professional";
+import Testimonials from "@/components/Testimonials";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import WhatsAppPopup from "@/components/WhatsAppPopup";
@@ -23,6 +24,7 @@ const Index = () => {
       <Thermography />
       <Structure />
       <Professional />
+      <Testimonials />
       <CtaSection />
       <Footer />
       <WhatsAppPopup />
