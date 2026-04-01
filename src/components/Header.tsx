@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo_colorida.png";
 import logoWhite from "@/assets/logo_branca.png";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, Moon, Sun, X, Instagram, Facebook } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Estrutura", href: "#estrutura" },
+  { label: "Nossos Clientes", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -46,6 +47,43 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
+      {/* Top bar – social + slogan */}
+      <div className={`hidden lg:block border-b transition-all duration-300 ${scrolled ? "border-border/30 bg-background/60" : "border-white/10 bg-black/20"}`}>
+        <div className="container mx-auto px-4 lg:px-8 py-2 flex items-center justify-between">
+          <p className="font-mono text-[11px] text-muted-foreground tracking-wide">
+            Fisioterapia Regenerativa en Recife – PE.
+          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/find.recife/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram FIND Recife"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Instagram size={14} />
+            </a>
+            <a
+              href="https://www.facebook.com/p/Consultório-FIND-61555041654471/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook FIND Recife"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Facebook size={14} />
+            </a>
+            <span className="w-px h-3 bg-border/50" />
+            <a
+              href="https://wa.me/558194251583"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[11px] text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              (81) 9425-1583
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         <a href="#inicio">
           <img src={isBlackTheme ? logoWhite : logo} alt="FIND Recife" className="h-12 w-auto" />

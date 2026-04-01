@@ -13,25 +13,19 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 pt-40 pb-16 lg:pt-12 lg:pb-0 relative z-10">
-        <div className="max-w-3xl space-y-8 animate-fade-up min-h-[85vh] flex flex-col justify-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-[12px] bg-secondary font-mono text-xs text-muted-foreground tracking-wide w-fit">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            Especialistas em Termografia Clínica
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display leading-[1.05] text-foreground">
-            Fisioterapia Regenerativa com{" "}
-            <em className="text-gradient-gold not-italic">Precisão</em>,{" "}
-            Tecnologia e Cuidado Individualizado
+      <div className="container mx-auto px-4 lg:px-8 pt-28 pb-14 lg:pt-24 lg:pb-10 relative z-10">
+        <div className="max-w-lg space-y-5 animate-fade-up">
+          <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-display leading-[1.15] text-foreground">
+            <span className="block">Fisioterapia Regenerativa com <em className="text-gradient-gold not-italic">Precisão</em>,</span>
+            <span className="block">Tecnologia e Cuidado Individualizado.</span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-xl font-body">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-md font-body">
             Tratamento especializado para dor músculo-esquelética, joelho e coluna.
             Recupere movimento e qualidade de vida com segurança.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-2">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-2 pt-1">
             <a
               href="https://wa.me/558194251583"
               target="_blank"

@@ -1,6 +1,8 @@
 const serviceGroups = [
   {
     category: "Avaliação e Diagnóstico",
+    image: "/servicos_tratamentos_especializados/doctor-helping-patient-rehabilitation.jpg",
+    imageAlt: "Profissional auxiliando paciente em avaliação clínica",
     services: [
       { name: "Consulta Especializada", desc: "Avaliação clínica detalhada para definição do melhor plano terapêutico." },
       { name: "Avaliação Termográfica", desc: "Mapeamento térmico do corpo para identificar alterações funcionais com precisão." },
@@ -8,27 +10,49 @@ const serviceGroups = [
   },
   {
     category: "Fisioterapia e Reabilitação",
+    image: "/servicos_tratamentos_especializados/female-physiotherapist-massaging-male-patient-office.jpg",
+    imageAlt: "Fisioterapeuta realizando reabilitação com paciente",
     services: [
       { name: "Dor Músculo-esquelética", desc: "Tratamento direcionado para alívio e resolução de dores articulares e musculares." },
       { name: "Reabilitação Funcional", desc: "Recuperação de movimentos e funcionalidade após lesões ou cirurgias." },
-      { name: "Fisioterapia Pós-AVC", desc: "Protocolos especializados para reabilitação neurológica funcional." },
     ],
   },
   {
     category: "Fisioterapia Regenerativa",
+    image: "/servicos_tratamentos_especializados/procedure-myostimulation-legs-woman.jpg",
+    imageAlt: "Procedimento de mioestimulação em membros inferiores",
     services: [
       { name: "Protocolos Regenerativos", desc: "Estímulo à regeneração natural dos tecidos com técnicas avançadas." },
-      { name: "Tratamento com Autólogos", desc: "Uso de materiais biológicos do próprio paciente para potencializar a cura." },
-      { name: "Processo Regenerativo com PRP", desc: "Plasma rico em plaquetas para acelerar a recuperação tecidual." },
+      { name: "Processo Regenerativo com iPRF", desc: "Desinflamação da cápsula articular com plasma rico em plaquetas e fibrina." },
     ],
   },
   {
-    category: "Terapias Complementares",
+    category: "Fisioterapia para Coluna",
+    image: "/servicos_tratamentos_especializados/physiotherapist-places-needles-female-patient-back-therapy-dryneedling-session.jpg",
+    imageAlt: "Fisioterapeuta realizando procedimento terapêutico na coluna",
     services: [
-      { name: "Terapia Neural", desc: "Tratamento de dor e inflamação por meio de regulação do sistema nervoso." },
-      { name: "Ozonioterapia", desc: "Ação anti-inflamatória e analgésica através do ozônio medicinal." },
-      { name: "Intradermoterapia", desc: "Aplicação localizada de substâncias terapêuticas para alívio de dor." },
-      { name: "Infiltração", desc: "Procedimento minimamente invasivo para tratamento preciso de dores articulares." },
+      { name: "Dor Lombar e Cervical", desc: "Protocolos especializados para alívio e resolução de dores na coluna." },
+      { name: "Disfunções Funcionais da Coluna", desc: "Avaliação e tratamento das disfunções que comprometem a mobilidade vertebral." },
+      { name: "Dor Músculo-esquelética com Ênfase em Coluna", desc: "Abordagem integrada focada na origem da dor e na recuperação funcional." },
+    ],
+  },
+  {
+    category: "Tratamentos para Joelho",
+    image: "/servicos_tratamentos_especializados/doctor-using-machine-treat-patients-shoulders.jpg",
+    imageAlt: "Tratamento fisioterapêutico com equipamento especializado",
+    services: [
+      { name: "Viscossuplementação para Artrose", desc: "Reposição do líquido sinovial para reduzir dor e melhorar a mobilidade articular." },
+      { name: "Condromalácia e Tendinite Patelar", desc: "Tratamento específico para lesões da cartilagem e tendão do joelho." },
+      { name: "Tratamento Combinado para Artrose Grau 3", desc: "Protocolo avançado para casos de artrose de maior complexidade." },
+    ],
+  },
+  {
+    category: "Procedimentos Regenerativos",
+    image: "/servicos_tratamentos_especializados/side-view-healthcare-professional-injecting-neck.jpg",
+    imageAlt: "Profissional aplicando procedimento regenerativo",
+    services: [
+      { name: "Desinflamação da Cápsula Articular com iPRF", desc: "Uso de plasma rico em plaquetas e fibrina para regeneração articular." },
+      { name: "Protocolos Regenerativos Direcionados", desc: "Estratégias terapêuticas personalizadas para estimular a recuperação natural." },
     ],
   },
 ];
@@ -44,31 +68,48 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {serviceGroups.map((group) => (
-            <div key={group.category} className="rounded-3xl bg-card shadow-card p-8">
-              <h3 className="font-display text-xl text-foreground mb-6 pb-4 border-b border-border">
-                {group.category}
-              </h3>
-              <div className="space-y-5">
+            <div
+              key={group.category}
+              className="group overflow-hidden rounded-3xl bg-card shadow-card hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+            >
+              {/* Image with reveal effect */}
+              <div className="relative overflow-hidden h-52">
+                <img
+                  src={group.image}
+                  alt={group.imageAlt}
+                  loading="lazy"
+                  className="w-full h-full object-cover grayscale-[0.35] brightness-90 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/75 via-card/10 to-transparent" />
+                <span className="absolute bottom-3 left-4 font-mono text-[10px] tracking-widest uppercase text-white bg-primary/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                  {group.category}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 space-y-4">
                 {group.services.map((service) => (
-                  <div key={service.name} className="group flex justify-between items-start gap-4">
+                  <div key={service.name} className="group/item flex justify-between items-start gap-4">
                     <div className="flex-1">
-                      <h4 className="font-body font-semibold text-sm text-foreground group-hover:text-primary transition-colors duration-200">
+                      <h4 className="font-body font-semibold text-sm text-foreground group-hover/item:text-primary transition-colors duration-200">
                         {service.name}
                       </h4>
-                      <p className="font-body text-sm text-muted-foreground mt-1">{service.desc}</p>
+                      <p className="font-body text-xs text-muted-foreground mt-1">{service.desc}</p>
                     </div>
                     <a
                       href="https://wa.me/558194251583"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="shrink-0 text-xs font-mono text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-1"
+                      className="shrink-0 text-xs font-mono text-primary opacity-0 group-hover/item:opacity-100 transition-opacity duration-200 mt-1"
                     >
                       Agendar →
                     </a>
                   </div>
                 ))}
+                {/* Accent bar que cresce da esquerda ao hover do card */}
+                <div className="h-px w-0 group-hover:w-full bg-primary transition-all duration-500 rounded-full" />
               </div>
             </div>
           ))}
