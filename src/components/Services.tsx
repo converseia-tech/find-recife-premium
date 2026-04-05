@@ -10,8 +10,8 @@ const serviceGroups = [
   },
   {
     category: "Fisioterapia e Reabilitação",
-    image: "/servicos_tratamentos_especializados/female-physiotherapist-massaging-male-patient-office.jpg",
-    imageAlt: "Fisioterapeuta realizando reabilitação com paciente",
+    image: "/servicos_tratamentos_especializados/doctor-helping-patient-rehabilitation.jpg",
+    imageAlt: "Fisioterapeuta auxiliando paciente em reabilitação",
     services: [
       { name: "Dor Músculo-esquelética", desc: "Tratamento direcionado para alívio e resolução de dores articulares e musculares." },
       { name: "Reabilitação Funcional", desc: "Recuperação de movimentos e funcionalidade após lesões ou cirurgias." },
@@ -19,8 +19,8 @@ const serviceGroups = [
   },
   {
     category: "Fisioterapia Regenerativa",
-    image: "/servicos_tratamentos_especializados/procedure-myostimulation-legs-woman.jpg",
-    imageAlt: "Procedimento de mioestimulação em membros inferiores",
+    image: "/servicos_tratamentos_especializados/side-view-healthcare-professional-injecting-neck.jpg",
+    imageAlt: "Profissional aplicando procedimento regenerativo",
     services: [
       { name: "Protocolos Regenerativos", desc: "Estímulo à regeneração natural dos tecidos com técnicas avançadas." },
       { name: "Processo Regenerativo com iPRF", desc: "Desinflamação da cápsula articular com plasma rico em plaquetas e fibrina." },
