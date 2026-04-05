@@ -18,16 +18,17 @@ const serviceGroups = [
     ],
   },
   {
-    category: "Fisioterapia Regenerativa",
+    category: "Procedimentos Regenerativos",
     image: "/servicos_tratamentos_especializados/side-view-healthcare-professional-injecting-neck.jpg",
     imageAlt: "Profissional aplicando procedimento regenerativo",
     services: [
       { name: "Protocolos Regenerativos", desc: "Estímulo à regeneração natural dos tecidos com técnicas avançadas." },
       { name: "Processo Regenerativo com iPRF", desc: "Desinflamação da cápsula articular com plasma rico em plaquetas e fibrina." },
+      { name: "Protocolos Regenerativos Direcionados", desc: "Estratégias terapêuticas personalizadas para estimular a recuperação natural." },
     ],
   },
   {
-    category: "Fisioterapia para Coluna",
+    category: "Tratamentos para Coluna",
     image: "/servicos_tratamentos_especializados/physiotherapist-places-needles-female-patient-back-therapy-dryneedling-session.jpg",
     imageAlt: "Fisioterapeuta realizando procedimento terapêutico na coluna",
     services: [
@@ -44,15 +45,6 @@ const serviceGroups = [
       { name: "Viscossuplementação para Artrose", desc: "Reposição do líquido sinovial para reduzir dor e melhorar a mobilidade articular." },
       { name: "Condromalácia e Tendinite Patelar", desc: "Tratamento específico para lesões da cartilagem e tendão do joelho." },
       { name: "Tratamento Combinado para Artrose Grau 3", desc: "Protocolo avançado para casos de artrose de maior complexidade." },
-    ],
-  },
-  {
-    category: "Procedimentos Regenerativos",
-    image: "/servicos_tratamentos_especializados/side-view-healthcare-professional-injecting-neck.jpg",
-    imageAlt: "Profissional aplicando procedimento regenerativo",
-    services: [
-      { name: "Desinflamação da Cápsula Articular com iPRF", desc: "Uso de plasma rico em plaquetas e fibrina para regeneração articular." },
-      { name: "Protocolos Regenerativos Direcionados", desc: "Estratégias terapêuticas personalizadas para estimular a recuperação natural." },
     ],
   },
 ];

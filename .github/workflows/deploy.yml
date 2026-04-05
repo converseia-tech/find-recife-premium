@@ -1,0 +1,21 @@
+name: VPS Auto Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH Trigger Dokku Git Sync
+        uses: appleboy/ssh-action@master
+        with:
+          host: 157.173.118.98
+          username: converseia
+          password: ${{ secrets.VPS_OS_PASSWORD }}
+          script: |
+            COMMIT_NAME=$(printf '%s' "${{ github.event.head_commit.message }}" | head -n 1)
+            if [ -z "$COMMIT_NAME" ]; then COMMIT_NAME="${{ github.sha }}"; fi
+            echo ${{ secrets.VPS_OS_PASSWORD }} | sudo -S dokku config:set --no-restart clinica-find-recife DEPLOYED_BRANCH=main DEPLOYED_REPO_URL=https://github.com/${{ github.repository }}.git DEPLOYED_COMMIT_SHA=${{ github.sha }} DEPLOYED_COMMIT_NAME="$COMMIT_NAME" DEPLOYED_COMMIT_URL=https://github.com/${{ github.repository }}/commit/${{ github.sha }}
+            echo ${{ secrets.VPS_OS_PASSWORD }} | sudo -S dokku git:sync --build clinica-find-recife https://x-access-token:${{ secrets.GITHUB_DOKKU_TOKEN }}@github.com/${{ github.repository }}.git main
