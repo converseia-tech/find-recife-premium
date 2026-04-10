@@ -20,8 +20,8 @@ const Index = () => {
       <About />
       <Differentials />
       <Services />
-      <KneeSpine />
       <Thermography />
+      <KneeSpine />
       <Structure />
       <Professional />
       <Testimonials />
