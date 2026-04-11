@@ -101,7 +101,7 @@ const Services = () => {
                   loop
                   playsInline
                   preload="auto"
-                  className="w-full aspect-[3/4] object-cover"
+                  className="w-full aspect-video object-cover"
                   aria-label="Depoimento real — recuperação de joelho"
                 />
               ) : (
@@ -109,7 +109,7 @@ const Services = () => {
                   src={joelhoPhotos[joelhoIdx - 1].src}
                   alt={joelhoPhotos[joelhoIdx - 1].alt}
                   loading="lazy"
-                  className="w-full aspect-[3/4] object-cover transition-opacity duration-500"
+                  className="w-full aspect-video object-cover transition-opacity duration-500"
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
@@ -183,7 +183,7 @@ const Services = () => {
                 src={colunaPhotos[colunaIdx].src}
                 alt={colunaPhotos[colunaIdx].alt}
                 loading="lazy"
-                className="w-full aspect-[3/4] object-cover transition-opacity duration-500"
+                className="w-full aspect-video object-cover transition-opacity duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
             </div>
