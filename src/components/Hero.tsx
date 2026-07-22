@@ -1,4 +1,4 @@
-import fotoPacientes from "@/assets/foto_pacientes.jpeg";
+import fotoAvaliacao from "@/assets/foto_avaliacao_consultorio.jpg";
 
 const Hero = () => {
   return (
@@ -6,9 +6,9 @@ const Hero = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src={fotoPacientes}
-          alt="Fisioterapeuta da FIND Recife avaliando e atendendo pacientes durante sessão de fisioterapia"
-          className="w-full h-full object-cover object-[center_30%]"
+          src={fotoAvaliacao}
+          alt="Fisioterapeuta avaliando a mobilidade de um paciente em consultório de fisioterapia"
+          className="w-full h-full object-cover object-[center_25%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
       </div>

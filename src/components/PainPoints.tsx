@@ -1,7 +1,7 @@
-import { Bone, Footprints, ArrowUpFromLine, Activity, Dumbbell, RotateCcw } from "lucide-react";
+import { PersonStanding, Footprints, ArrowUpFromLine, Activity, Dumbbell, RotateCcw } from "lucide-react";
 
 const pains = [
-  { icon: Bone, label: "Dor na coluna" },
+  { icon: PersonStanding, label: "Dor na coluna" },
   { icon: Activity, label: "Dor no joelho" },
   { icon: Footprints, label: "Dor ao caminhar" },
   { icon: ArrowUpFromLine, label: "Dor para subir escadas" },
