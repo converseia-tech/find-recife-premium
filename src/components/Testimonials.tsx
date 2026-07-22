@@ -81,7 +81,7 @@ const Testimonials = () => {
             Depoimentos
           </p>
           <h2 className="text-3xl lg:text-5xl font-display text-foreground mb-4">
-            Resultados que falam por si
+            Quem já passou pela FIND conta como foi a experiência
           </h2>
           <p className="font-body text-base text-muted-foreground">
             Histórias reais de pacientes que recuperaram qualidade de vida com a FIND.
@@ -191,6 +191,17 @@ const Testimonials = () => {
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <a
+            href="https://wa.me/558194251583"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animate-pulse-glow inline-flex items-center justify-center px-8 py-4 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-base shadow-gold hover:scale-[1.02] transition-all duration-200"
+          >
+            Falar no WhatsApp
+          </a>
         </div>
       </div>
     </section>

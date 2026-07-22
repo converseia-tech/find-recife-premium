@@ -132,6 +132,45 @@ const Differentials = () => {
           </div>
         </div>
 
+        {/* ── Regenerative physio block ─────────────────────────── */}
+        <div className="mt-20 rounded-3xl bg-dark-surface overflow-hidden relative">
+          {/* Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid lg:grid-cols-2 gap-0 items-stretch">
+            {/* Image side */}
+            <div className="relative min-h-[280px] lg:min-h-0 order-1">
+              <img
+                src="/servicos_tratamentos_especializados/side-view-healthcare-professional-injecting-neck.jpg"
+                alt="Aplicação de tratamento regenerativo na FIND Recife"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 shadow-[inset_0_0_80px_rgba(197,160,89,0.15)]" />
+            </div>
+
+            {/* Text side */}
+            <div className="p-10 lg:p-14 space-y-6 flex flex-col justify-center order-2">
+              <p className="font-mono text-xs text-primary tracking-widest uppercase">Diferencial</p>
+              <h3 className="text-2xl lg:text-4xl font-display text-dark-surface-foreground leading-snug">
+                Fisioterapia regenerativa explicada de um jeito simples
+              </h3>
+              <p className="text-dark-surface-foreground/70 font-body text-sm leading-relaxed">
+                Na prática, a fisioterapia regenerativa busca ajudar seu corpo a se recuperar
+                melhor, com técnicas e recursos que apoiam a melhora da dor, da mobilidade e
+                da função.
+              </p>
+              <a
+                href="https://wa.me/558194251583"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
+              >
+                Quero saber mais
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* ── Thermography block ────────────────────────────────── */}
         <div className="mt-20 rounded-3xl bg-dark-surface overflow-hidden relative">
           {/* Glow */}

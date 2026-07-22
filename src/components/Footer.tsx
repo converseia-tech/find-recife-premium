@@ -4,15 +4,15 @@ import logoBranca from "@/assets/logo_branca.png";
 const Footer = () => {
   const navLinks = [
     { label: "Início", href: "#inicio" },
-    { label: "Sobre", href: "#sobre" },
     { label: "Serviços", href: "#servicos" },
     { label: "Diferenciais", href: "#diferenciais" },
+    { label: "Sobre", href: "#sobre" },
     { label: "Estrutura", href: "#estrutura" },
     { label: "Contato", href: "#contato" },
   ];
 
   return (
-    <footer id="contato" className="bg-dark-surface pt-16 pb-8">
+    <footer id="contato" className="bg-dark-surface pt-16 pb-24">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-4 gap-12 pb-12 border-b border-dark-surface-foreground/10">
           {/* Logo + about */}
@@ -128,28 +128,37 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-mono text-xs text-dark-surface-foreground/30">
-            © 2026 FIND Recife. Todos os direitos reservados.
-          </p>
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.instagram.com/find.recife/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-xs text-dark-surface-foreground/30 hover:text-primary transition-colors"
-            >
-              @find.recife
-            </a>
-            <span className="text-dark-surface-foreground/20">·</span>
-            <a
-              href="https://wa.me/558194251583"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-xs text-primary hover:text-accent transition-colors"
-            >
-              Falar no WhatsApp
-            </a>
+        <div className="pt-8 flex flex-col items-center gap-8">
+          <a
+            href="https://wa.me/558194251583"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="animate-pulse-glow inline-flex items-center justify-center px-8 py-4 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-base shadow-gold hover:scale-[1.02] transition-all duration-200"
+          >
+            Chamar a FIND no WhatsApp
+          </a>
+
+          <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="font-mono text-xs text-dark-surface-foreground/30">
+              © 2026 FIND Recife. Todos os direitos reservados.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/find.recife/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs text-dark-surface-foreground/30 hover:text-primary transition-colors"
+              >
+                @find.recife
+              </a>
+              <span className="text-dark-surface-foreground/20">·</span>
+              <a
+                href="/politica-de-privacidade"
+                className="font-mono text-xs text-dark-surface-foreground/30 hover:text-primary transition-colors"
+              >
+                Política de Privacidade
+              </a>
+            </div>
           </div>
         </div>
       </div>

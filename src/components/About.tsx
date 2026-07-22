@@ -102,9 +102,9 @@ const About = () => {
               href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
+              className="animate-pulse-glow inline-flex items-center px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
             >
-              Falar com a FIND
+              Falar com a equipe da FIND
             </a>
           </div>
 

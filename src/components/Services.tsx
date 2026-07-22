@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 
 const joelhoPhotos = [
   { src: "/novas_midias_site_find/tratamento_joelho/dr_emanuel_aplicando_no_joelho.jpeg", alt: "Dr. Emanuel aplicando tratamento no joelho" },
@@ -13,18 +13,11 @@ const colunaPhotos = [
   { src: "/novas_midias_site_find/tratamento_coluna/aplicacao_infiltracao_paciente_coluna1.jpeg", alt: "Infiltração vertebral direcionada" },
 ];
 
-const joelhoServices = [
-  { name: "Viscossuplementação para Artrose", desc: "Reposição do líquido sinovial para reduzir dor e melhorar a mobilidade articular." },
-  { name: "Condromalácia e Tendinite Patelar", desc: "Tratamento específico para lesões da cartilagem e tendão do joelho." },
-  { name: "Tratamento Combinado para Artrose Grau 3", desc: "Protocolo avançado para casos de artrose de maior complexidade." },
-  { name: "Desinflamação da Cápsula Articular com iPRF", desc: "Regeneração articular com plasma rico em plaquetas e fibrina." },
-];
+const joelhoIntro = "Se você sente dor ao caminhar, correr, subir escadas ou agachar, a FIND avalia seu caso para indicar o tratamento mais adequado.";
+const joelhoTopics = ["Dor no joelho", "Lesões", "Pós-operatório", "Dificuldade para caminhar ou treinar"];
 
-const colunaServices = [
-  { name: "Dor Lombar e Cervical", desc: "Protocolos especializados para alívio e resolução de dores na coluna." },
-  { name: "Disfunções Funcionais da Coluna", desc: "Avaliação e tratamento das disfunções que comprometem a mobilidade vertebral." },
-  { name: "Dor Músculo-esquelética com Ênfase em Coluna", desc: "Abordagem integrada focada na origem da dor e na recuperação funcional." },
-];
+const colunaIntro = "Se você sente dor na lombar, no pescoço, ao ficar muito tempo sentado ou em pé, a FIND avalia seu caso para indicar o tratamento mais adequado.";
+const colunaTopics = ["Dor na coluna", "Hérnia de disco", "Dor lombar ou cervical", "Dificuldade de mobilidade"];
 
 const otherProcedures = [
   {
@@ -67,6 +60,13 @@ const ServiceItem = ({ name, desc, idx }: { name: string; desc: string; idx: num
       <p className="font-body font-semibold text-sm text-foreground">{name}</p>
       <p className="font-body text-xs text-muted-foreground mt-0.5 leading-relaxed">{desc}</p>
     </div>
+  </div>
+);
+
+const TopicItem = ({ label }: { label: string }) => (
+  <div className="flex items-center gap-2.5">
+    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+    <p className="font-body text-sm text-foreground">{label}</p>
   </div>
 );
 
@@ -158,11 +158,12 @@ const Services = () => {
                   Especialidade
                 </span>
                 <h3 className="font-display text-2xl text-foreground mt-3">
-                  Tratamentos para <em className="text-gradient-gold not-italic">Joelho</em>
+                  Fisioterapia para dor no <em className="text-gradient-gold not-italic">joelho</em> em Recife
                 </h3>
               </div>
-              <div className="space-y-3 flex-1">
-                {joelhoServices.map((s, i) => <ServiceItem key={s.name} name={s.name} desc={s.desc} idx={i} />)}
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">{joelhoIntro}</p>
+              <div className="grid grid-cols-2 gap-3 flex-1 content-start">
+                {joelhoTopics.map((t) => <TopicItem key={t} label={t} />)}
               </div>
               <a
                 href="https://wa.me/558194251583"
@@ -170,7 +171,7 @@ const Services = () => {
                 rel="noopener noreferrer"
                 className="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
               >
-                Agendar Avaliação →
+                Avaliar minha dor no joelho →
               </a>
             </div>
           </div>
@@ -209,11 +210,12 @@ const Services = () => {
                   Especialidade
                 </span>
                 <h3 className="font-display text-2xl text-foreground mt-3">
-                  Tratamentos para <em className="text-gradient-gold not-italic">Coluna</em>
+                  Fisioterapia para dor na <em className="text-gradient-gold not-italic">coluna</em> em Recife
                 </h3>
               </div>
-              <div className="space-y-3 flex-1">
-                {colunaServices.map((s, i) => <ServiceItem key={s.name} name={s.name} desc={s.desc} idx={i} />)}
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">{colunaIntro}</p>
+              <div className="grid grid-cols-2 gap-3 flex-1 content-start">
+                {colunaTopics.map((t) => <TopicItem key={t} label={t} />)}
               </div>
               <a
                 href="https://wa.me/558194251583"
@@ -221,7 +223,7 @@ const Services = () => {
                 rel="noopener noreferrer"
                 className="self-start inline-flex items-center gap-2 px-5 py-2.5 rounded-[10px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
               >
-                Agendar Avaliação →
+                Avaliar minha dor na coluna →
               </a>
             </div>
           </div>

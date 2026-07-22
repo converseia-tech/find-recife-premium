@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo_colorida.png";
 import logoWhite from "@/assets/logo_branca.png";
-import { Menu, Moon, Sun, X, Instagram, Facebook } from "lucide-react";
+import { Menu, Moon, Sun, X, Instagram, Facebook, MessageCircle } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Estrutura", href: "#estrutura" },
   { label: "Nossos Clientes", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
@@ -117,9 +117,9 @@ const Header = () => {
             href="https://wa.me/558194251583"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
+            className="animate-pulse-glow inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200"
           >
-            Agendar Avaliação
+            Agendar avaliação
           </a>
         </div>
 
@@ -132,6 +132,16 @@ const Header = () => {
           >
             {isBlackTheme ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+
+          <a
+            href="https://wa.me/558194251583"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar avaliação pelo WhatsApp"
+            className="animate-pulse-glow inline-flex items-center justify-center h-10 w-10 rounded-[12px] bg-primary text-primary-foreground shadow-gold"
+          >
+            <MessageCircle size={18} />
+          </a>
 
           <button
             className="text-foreground"
@@ -159,9 +169,9 @@ const Header = () => {
               href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center justify-center px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold"
+              className="animate-pulse-glow mt-2 inline-flex items-center justify-center px-6 py-3 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold"
             >
-              Agendar Avaliação
+              Agendar avaliação
             </a>
           </nav>
         </div>
