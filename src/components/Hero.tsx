@@ -14,9 +14,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 pt-28 pb-14 lg:pt-24 lg:pb-10 relative z-10">
-        <div className="max-w-lg space-y-5 animate-fade-up">
+        <div className="max-w-xl space-y-6 animate-fade-up">
           <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-display leading-[1.15] text-foreground">
-            Fisioterapia em <em className="text-gradient-gold not-italic">Recife</em> para aliviar dores e recuperar seus movimentos
+            Fisioterapia em <em className="text-gradient-gold not-italic">Recife</em> para recuperar o movimento sem dor
           </h1>
 
           <p className="text-base lg:text-lg text-muted-foreground max-w-md font-body">
@@ -24,20 +24,20 @@ const Hero = () => {
             Fale com a equipe da FIND e veja o melhor tratamento para o seu caso.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up-delay-2 pt-1">
+          <div className="flex flex-col sm:flex-row gap-3 animate-fade-up-delay-2 pt-1">
             <a
               href="https://wa.me/558194251583"
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-pulse-glow inline-flex items-center justify-center px-8 py-4 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-base shadow-gold hover:scale-[1.02] transition-all duration-200"
+              className="animate-pulse-glow inline-flex items-center justify-center px-6 py-3.5 rounded-[12px] bg-primary text-primary-foreground font-body font-semibold text-sm shadow-gold hover:scale-[1.02] transition-all duration-200 whitespace-nowrap"
             >
-              Agendar avaliação pelo WhatsApp
+              Agendar avaliação
             </a>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-[12px] border border-border text-foreground font-body font-semibold text-base hover:border-primary/40 hover:text-primary transition-all duration-200"
+              className="inline-flex items-center justify-center px-6 py-3.5 rounded-[12px] border border-border text-foreground font-body font-semibold text-sm hover:border-primary/40 hover:text-primary transition-all duration-200 whitespace-nowrap"
             >
-              Conheça Nossos Serviços
+              Nossos serviços
             </a>
           </div>
 
